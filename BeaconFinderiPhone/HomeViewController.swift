@@ -61,10 +61,21 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let tvc = segue.destinationViewController as! BeaconTableViewController
-        print("WE GOING IN!")
-        print(items.count)
-        tvc.ourBeacons = MYbeacons
+        print("we in")
+        if segue.identifier == "QRseg" {
+            print("go go go")
+        } else {
+            let tvc = segue.destinationViewController as! BeaconTableViewController
+            print("WE GOING IN!")
+            print(items.count)
+            tvc.ourBeacons = MYbeacons
+        }
+    }
+    
+    @IBAction func scanButton (sender: UIButton!) {
+        print("we doing in")
+        performSegueWithIdentifier("QRseg", sender: self)
+        
     }
     
     @IBAction func returnfromConfigure (segue : UIStoryboardSegue) {

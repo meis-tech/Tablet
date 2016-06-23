@@ -301,6 +301,57 @@
             </objects>
             <point key="canvasLocation" x="7845" y="638"/>
         </scene>
+        <!--Reader View Controller-->
+        <scene sceneID="lz7-wU-Tj2">
+            <objects>
+                <viewController id="FN1-bX-USH" customClass="QRReaderViewController" customModule="BeaconFinderiPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6oE-UW-2H1"/>
+                        <viewControllerLayoutGuide type="bottom" id="53R-Ac-H3Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XJc-lA-uOs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGE-q9-sLF">
+                                <rect key="frame" x="44" y="40" width="680" height="840"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QR Code Reader is not yet running…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quS-dg-nuM">
+                                <rect key="frame" x="20" y="467" width="728" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.34844679690000002" green="0.67666066749999998" blue="0.2872414492" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap on Start! to read a QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-BU-dgm">
+                                <rect key="frame" x="20" y="329" width="666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1a-F8-Jbx">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem title="Start!" id="rUV-bQ-CWo">
+                                        <connections>
+                                            <action selector="startStopReading" destination="FN1-bX-USH" id="LJe-jP-Elj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="bbstart" destination="rUV-bQ-CWo" id="vbG-Ph-0nR"/>
+                        <outlet property="promptlabel" destination="eBf-BU-dgm" id="20c-vC-uQB"/>
+                        <outlet property="statuslabel" destination="quS-dg-nuM" id="lH5-ab-cfc"/>
+                        <outlet property="viewPreview" destination="sGE-q9-sLF" id="Jx7-2l-CJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCB-cE-0M4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4588" y="-662"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="93F-V0-oMX">
             <objects>
@@ -350,9 +401,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-6S-Pwu">
-                                <rect key="frame" x="223" y="416" width="304" height="98"/>
+                                <rect key="frame" x="208" y="412" width="304" height="98"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Find some Poeple in Need">
+                                <state key="normal" title="Find poeple">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -371,6 +422,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qli-h1-IDn">
+                                <rect key="frame" x="255" y="540" width="210" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Read Qr for Info"/>
+                                <connections>
+                                    <action selector="scanButton:" destination="ht6-1R-lXe" eventType="touchUpInside" id="o9n-N5-USV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -389,11 +448,12 @@
                     <connections>
                         <outlet property="numberOfBLEs" destination="xtX-ba-aUm" id="Cbf-Qu-lYH"/>
                         <outlet property="numberOfbecs" destination="0Fc-os-E8l" id="DPf-LM-sh3"/>
+                        <segue destination="FN1-bX-USH" kind="modal" identifier="QRseg" id="NBP-1E-EKw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adI-Rf-MdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4675.8400000000001" y="471.04000000000002"/>
+            <point key="canvasLocation" x="4675" y="471"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GlZ-6J-vUe">

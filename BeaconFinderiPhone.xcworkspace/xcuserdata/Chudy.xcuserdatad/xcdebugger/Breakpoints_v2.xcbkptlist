@@ -2,4 +2,52 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeaconFinderiPhone/SettingViewController.swift"
+            timestampString = "488316753.123703"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeaconFinderiPhone.SettingViewController.init (BeaconFinderiPhone.SettingViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; BeaconFinderiPhone.SettingViewController"
+                  moduleName = "BeaconFinderiPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chudy/PRYSMIC/Betas/Tablet/Finder/BeaconFinderiPhone/SettingViewController.swift"
+                  timestampString = "488321417.015577"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeaconFinderiPhone.SettingViewController.init (BeaconFinderiPhone.SettingViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BeaconFinderiPhone.SettingViewController&gt;"
+                  moduleName = "BeaconFinderiPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Chudy/PRYSMIC/Betas/Tablet/Finder/BeaconFinderiPhone/SettingViewController.swift"
+                  timestampString = "488321417.015823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
